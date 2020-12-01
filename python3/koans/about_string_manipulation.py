@@ -34,8 +34,8 @@ class AboutStringManipulation(Koan):
         self.assertEqual('a', string[1])
 
     def test_single_characters_can_be_represented_by_integers(self):
-        self.assertEqual(__, ord('a'))
-        self.assertEqual(__, ord('b') == (ord('a') + 1))
+        self.assertEqual(97, ord('a'))
+        self.assertEqual(True, ord('b') == (ord('a') + 1))
 
     def test_strings_can_be_split(self):
         string = "Sausage Egg Cheese"
@@ -64,11 +64,11 @@ class AboutStringManipulation(Koan):
 
     def test_strings_can_be_joined(self):
         words = ["Now", "is", "the", "time"]
-        self.assertEqual("Now", "is", "the", "time", ' '.join(words))
+        self.assertEqual('Now is the time', ' '.join(words))
 
     def test_strings_can_change_case(self):
         self.assertEqual('Guido', 'guido'.capitalize())
         self.assertEqual('GUIDO', 'guido'.upper())
-        self.assertEqual('guido', 'TimBot'.lower())
+        self.assertEqual('timbot', 'TimBot'.lower())
         self.assertEqual('Guido Van Rossum', 'guido van rossum'.title())
         self.assertEqual('tOtAlLy AwEsOmE', 'ToTaLlY aWeSoMe'.swapcase())
